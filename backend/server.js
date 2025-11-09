@@ -14,18 +14,28 @@ const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 
-// middlewares
+// ✅ Secure & controlled CORS setup
+app.use(cors({
+  origin: [
+    'https://matify-frontend.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:3000'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}))
+
+// Middlewares
 app.use(express.json())
-app.use(cors())
 
-// api endpoints
-app.use('/api/user',userRouter)
-app.use('/api/product',productRouter)
-app.use('/api/cart',cartRouter)
-app.use('/api/order',orderRouter)
+// API Routes
+app.use('/api/user', userRouter)
+app.use('/api/product', productRouter)
+app.use('/api/cart', cartRouter)
+app.use('/api/order', orderRouter)
 
-app.get('/',(req,res)=>{
-    res.send("API Working perfectly✅")
+app.get('/', (req, res) => {
+  res.send("API Working perfectly✅")
 })
 
-app.listen(port, ()=> console.log('🚀Server started on PORT : '+ port))
+app.listen(port, () => console.log('🚀 Server started on PORT : ' + port))
