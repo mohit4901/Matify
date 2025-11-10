@@ -19,7 +19,8 @@ app.use(cors({
   origin: [
     'https://matify-frontend.vercel.app',
     'http://localhost:5173',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://www.matify.store'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
@@ -39,3 +40,4 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => console.log('🚀 Server started on PORT : ' + port))
+
