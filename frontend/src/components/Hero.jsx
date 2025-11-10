@@ -21,10 +21,11 @@ const Hero = () => {
             </div>
       </div>
       {/* Hero Right Side */}
-      <img className='w-[600px] h-[600px]' src={assets.hero_img} alt="" />
+      <img className='w-[600px] h-[600px]' src={assets.p_img2_2} alt="" />
     </div>
   )
 }
 
 export default Hero
+
 
