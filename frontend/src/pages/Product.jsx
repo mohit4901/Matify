@@ -56,8 +56,8 @@ const Product = () => {
               <img src={assets.star_icon} alt="" className="w-3 5" />
               <img src={assets.star_dull_icon} alt="" className="w-3 5" />
               <p className='pl-2'>(122)</p>
-          </div>
-          <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}  <span style={{ color: "red", text: "3xl" , fontWeight: "600" }}> 30% OFF </span> <span style={{ textDecoration: "line-through", color: "gray", text: "2xl" , marginRight: "8px" }}> ₹4999</span></p>
+          </div>s
+          <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}  <span style={{ color: "red", text: "3xl" , fontWeight: "600" }}> <h3>30% OFF </h3></span> <span style={{ textDecoration: "line-through", color: "gray", text: "2xl" , marginRight: "8px" }}> ₹4999</span></p>
           <p className='mt-5 text-gray-500 md:w-4/5'>{productData.description}</p>
           <div className='flex flex-col gap-4 my-8'>
               <p>Select Size</p>
@@ -114,5 +114,6 @@ Each mat is hand-finished by professional carpet layers, giving it that rare cra
 }
 
 export default Product
+
 
 
