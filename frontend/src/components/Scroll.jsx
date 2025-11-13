@@ -10,7 +10,7 @@ export default function InfiniteHorizontalScroll() {
   const repeated = Array(10).fill(messages.join(' \u00A0 • \u00A0 ')).join(' \u00A0 • \u00A0 ');
 
   return (
-    <div className="w-full overflow-hidden bg-[#F5F5DC] pt-10 mt-6 sm:mt-10 md:mt-20 lg:mt-16">
+    <div className="w-full overflow-hidden bg-[#F5F5DC] py-2 mt-6 sm:mt-10 md:mt-12 lg:mt-16">
       <div className="relative flex whitespace-nowrap animate-marquee text-black font-medium text-sm sm:text-base">
         <span className="pr-12">{repeated}</span>
         <span className="pr-12">{repeated}</span>
@@ -30,9 +30,9 @@ export default function InfiniteHorizontalScroll() {
           .animate-marquee {
             animation: marquee 25s linear infinite;
           }
-          /* Increased margin-top for mobile view */
+          /* Set margin-top to 300px for small screens */
           .mt-6 {
-            margin-top: 10rem !important;
+            margin-top: 300px !important;
           }
         }
 
