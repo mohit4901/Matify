@@ -7,13 +7,13 @@ export default function InfiniteHorizontalScroll() {
     "We are here to assist you 24/7"
   ];
 
-  const repeated = Array(8).fill(messages.join(' \u00A0 • \u00A0 ')).join(' \u00A0 • \u00A0 ');
+  const repeated = Array(10).fill(messages.join(' \u00A0 • \u00A0 ')).join(' \u00A0 • \u00A0 ');
 
   return (
-    <div className="w-full overflow-hidden bg-beige py-2" style={{ backgroundColor: '#F5F5DC' }}>
-      <div className="relative flex whitespace-nowrap animate-marquee">
-        <span className="text-black font-semibold text-base pr-12">{repeated}</span>
-        <span className="text-black font-semibold text-base pr-12">{repeated}</span>
+    <div className="w-full overflow-hidden py-2 bg-[#F5F5DC]">
+      <div className="relative flex whitespace-nowrap animate-marquee text-black font-medium text-sm sm:text-base">
+        <span className="pr-12">{repeated}</span>
+        <span className="pr-12">{repeated}</span>
       </div>
 
       <style>{`
@@ -23,7 +23,16 @@ export default function InfiniteHorizontalScroll() {
         }
 
         .animate-marquee {
-          animation: marquee 18s linear infinite;
+          animation: marquee 20s linear infinite;
+        }
+
+        @media (max-width: 640px) {
+          .animate-marquee {
+            animation: marquee 25s linear infinite;
+          }
+          span {
+            font-size: 0.85rem;
+          }
         }
 
         .animate-marquee:hover {
