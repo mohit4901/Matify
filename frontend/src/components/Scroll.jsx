@@ -10,7 +10,7 @@ export default function InfiniteHorizontalScroll() {
   const repeated = Array(10).fill(messages.join(' \u00A0 • \u00A0 ')).join(' \u00A0 • \u00A0 ');
 
   return (
-    <div className="w-full overflow-hidden bg-[#F5F5DC] py-2 mt-12 sm:mt-20 md:mt-12 lg:mt-16">
+    <div className="w-full overflow-hidden bg-[#F5F5DC] py-10 mt-12 sm:mt-20 md:mt-20 lg:mt-16">
       <div className="relative flex whitespace-nowrap animate-marquee text-black font-medium text-sm sm:text-base">
         <span className="pr-12">{repeated}</span>
         <span className="pr-12">{repeated}</span>
