@@ -32,7 +32,7 @@ export default function InfiniteHorizontalScroll() {
           }
           /* Set margin-top to 300px for small screens */
           .mt-6 {
-            margin-top: 300px !important;
+            margin-top: 320px !important;
           }
         }
 
