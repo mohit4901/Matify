@@ -2,15 +2,15 @@ import React from "react";
 
 export default function InfiniteHorizontalScroll() {
   const messages = [
-    "Please login or signup before placing order otherwise the button of place order will not work.",
-    "Check cart after pressing the button Add to cart.",
-    "We are here to assist you 24/7"
+    "Please login or signup before placing an order. Otherwise, the 'Place Order' button will not work.",
+    "After adding items, please check your cart to confirm the selections.",
+    "We are here to assist you 24/7."
   ];
 
   const repeated = Array(10).fill(messages.join(' \u00A0 • \u00A0 ')).join(' \u00A0 • \u00A0 ');
 
   return (
-    <div className="w-full overflow-hidden py-2 bg-[#F5F5DC] mt-4 sm:mt-6 md:mt-8 lg:mt-10">
+    <div className="w-full overflow-hidden bg-[#F5F5DC] py-2 mt-6 sm:mt-10 md:mt-12 lg:mt-16">
       <div className="relative flex whitespace-nowrap animate-marquee text-black font-medium text-sm sm:text-base">
         <span className="pr-12">{repeated}</span>
         <span className="pr-12">{repeated}</span>
@@ -30,12 +30,9 @@ export default function InfiniteHorizontalScroll() {
           .animate-marquee {
             animation: marquee 25s linear infinite;
           }
-          span {
-            font-size: 0.85rem;
-          }
-          /* Increase margin by 50% on mobile */
-          .mt-4 {
-            margin-top: 3rem !important; /* 50% more than default */
+          /* Increased margin-top for mobile view */
+          .mt-6 {
+            margin-top: 5rem !important;
           }
         }
 
