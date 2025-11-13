@@ -23,12 +23,12 @@ export default function InfiniteHorizontalScroll() {
         }
 
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 10s linear infinite;
         }
 
         @media (max-width: 640px) {
           .animate-marquee {
-            animation: marquee 25s linear infinite;
+            animation: marquee 15s linear infinite;
           }
           /* Set margin-top to 300px for small screens */
           .mt-6 {
